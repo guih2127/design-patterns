@@ -1,0 +1,30 @@
+PADRÃO CRIACIONAL -- SINGLETON
+
+INTENÇÃO: 
+  Garantir que uma classe tenha somente uma instância no programa e
+fornecer um ponto de acesso global para a mesma.
+
+EXPLICAÇÃO: 
+  As vezes, precisamos manter apenas uma instância de determinada 
+classe em nosso programa, como recursos compartilhados, tal como acesso 
+a base da dados e loggers. Implementando um Singleton corretamente, protegemos 
+a instância criada, não sendo possível substituí-la acidentalmente.
+
+APLICABILIDADE: 
+  Usar quando for necessário ter uma única instância disponível em todo o programa. 
+  Usar quando variávies globais estiverem sendo usadas para manter partes importantes
+  do programa, como variáveis de configuração utilizadas por toda a aplicação.
+
+CONSEQUÊNCIAS:
+PROS:
+  Acesso controlado à instância única.
+  Fácil de permitir a criação de várias instâncias, caso mudemos de ideia.
+  Usa lazy instantiation, ele só é criado no momento de uso.
+  Substitui variáveis globais.
+CONTRAS:
+  Difícil de testar, pois a instância é unica.
+  Viola o princípio de responsabilidade única.
+  Requer tratamento especial em cassos de concorrência, podendo criar mais de 
+    uma instância.
+  O autor citou que este seria o único padrão que ele removeria se fosse atualizar
+    o livro.
