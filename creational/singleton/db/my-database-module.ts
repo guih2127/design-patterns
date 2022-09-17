@@ -1,4 +1,4 @@
-import { User } from "../../../interfaces/user";
+import { User } from "../interfaces/user";
 
 // Em Typescript, modules são singletons, então podemos fazer assim
 const users: User[] = [];

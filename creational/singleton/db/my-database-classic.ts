@@ -1,4 +1,4 @@
-import { User } from "../../../interfaces/user";
+import { User } from "../interfaces/user";
 
 // Esse código funciona em qualquer linguagem, OOP, praticamente.
 export class MyDatabaseClassic {

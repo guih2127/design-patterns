@@ -1,0 +1,30 @@
+PADRÃO CRIACIONAL -- BUILDER
+
+INTENÇÃO: 
+  Separar a criação de um objeto complexo da representação deste objeto, para que
+o prodcesso possa criar diferentes representações.
+
+EXPLICAÇÃO: 
+  O Builder trata da criação de objetos complexos (realmente complexos). Podemos
+utilizá-lo em objetos com construtores muito complexos, objetos com composição 
+por vários objetos (composite) e também em algoritmos de criação de objetos 
+complexos.
+  Ele visa criar o objeto em etapas e permite usar o method chaining 
+(chamar um metódo logo após o outro). Além disso, o objeto final pode variar
+de acordo com a necessidade.
+  É um padrão complexo. Quanto mais complexo o objeto, mais complexo o Builder.
+Além disso, quanto mais Builders tivermos, mais complexos a aplicação ficará.
+
+APLICABILIDADE: 
+  Usar na criação de objetos complexos. Se um objeto estiver com um construtores
+muito grande, com um algoritmo muito complexo ou for composto por vários objetos,
+talvez seja bom criar um Builder.
+
+CONSEQUÊNCIAS:
+PROS:
+  Separa criação da utilização.
+  O Cliente não precisa criar objetos diretamente.
+  O mesmo código pode construir objetos diferentes.
+  Ajuda na aplicação dos princípios SRP e OCP.
+CONTRAS:
+  O código final pode se tornar muito complexo.

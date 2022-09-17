@@ -1,4 +1,4 @@
-import { User } from "../../../interfaces/user";
+import { User } from "../interfaces/user";
 
 // Podemos fazer Singletons também com Funções autoinvocáveis.
 export const MyDatabaseFunction = (function () {
