@@ -1,11 +1,16 @@
-import { MainDishBuilder } from "./creational/builder/classes/main-dish-builder";
+import {
+  Address,
+  Person,
+} from "./creational/prototype/prototype-deep-copy/prototype";
 
-const mainDishBuilder = new MainDishBuilder();
-mainDishBuilder.makeMeal().makeDessert();
-console.log(mainDishBuilder.getMeal());
-console.log(mainDishBuilder.getPrice());
+const address1 = new Address("Rua 1", 15);
+const person1 = new Person("Person 1", 30);
+person1.addAddress(address1);
 
-mainDishBuilder.reset();
+// Adicionamos addresses no Person1, então clonamos uma Person2 a partir dela,
+// e esta tem os mesmos Address, porém no prototype.
+const person2 = person1.clone();
+person2.name = "Person 2";
+person2.addresses[0].street = "AAAAAAA"; // Altera o endereço dos dois.
 
-const meal2 = mainDishBuilder.makeBeverage().getMeal();
-console.log(meal2);
+console.log(person1.addresses, person2.addresses);

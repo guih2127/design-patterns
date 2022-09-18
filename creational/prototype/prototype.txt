@@ -1,0 +1,36 @@
+PADRÃO CRIACIONAL -- PROTPTYPE
+
+INTENÇÃO: 
+  Especificar os tipos de objetos a serem criados usando uma instância-protótipo
+e criar novos objetos pela cópia desse projeto.
+
+EXPLICAÇÃO: 
+  JS/TS são linguagens baseadas em protótipos. Com protótipos, objetos estão
+ligados à outros objetos, podemos fazer literalmente um objeto "herdar" de outro.
+A herança é obtida via delegação, ou seja, um objeto delega algo para seu
+protótipo. Uma das maneiras mais simples para manipular o protótipo de um
+objeto é usando Object.create(prototypeObject).
+  Também temos o csotume a usar classes ou funções construtoras para manipulação
+de protótipos (Isso faz com que JS/TS pareám estar usando POO, mas não).
+  O tipo de objeto a ser criado é determinado pelo objeto protótipo. É tipicamente
+utilizado para evitar a recriação de objetos caros (complexos ou pesados).
+  Ajuda a evitar a explosão de subclasses. Pode também ou não manter um registro de
+objetos protótipo em um objeto separado.
+  Geralmente, o Prototype é criado apenas com um metódo "clone" dentro do objeto
+protótipo. O metódo clone pode gerar uma "shallow" ou um "deep" copy do
+objeto protótipo.
+  Ele evita que o cliente conheça as classes que criam os objetos.
+
+APLICABILIDADE: 
+  Podemos utilizá-lo quando precisarmos que o código não dependa de classes 
+concretas para a criação de novos objetos. Podemos utilizá-lo também quando
+desejarmos evitar explosão de subclasses para objetos muito similares. Por
+último, podemos utilizar o prototype para evitar a recriação de objetos "caros".
+
+CONSEQUÊNCIAS:
+PROS:
+  Oculta classes concretas do código cliente.
+  Ajuda na criação de objetos caros ou complexos.
+  Evita a explosão de subclasses.
+CONTRAS:
+  Clonar objetos que tem referências para outros objetos pode ser complexo.
